@@ -63,9 +63,9 @@ body {
 
 .left {
   left: -80% !important;
-  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  -webkit-transition: left 0.3s ease-in-out 0.1s;
+  -o-transition: left 0.3s ease-in-out 0.1s;
+  transition: left 0.3s ease-in-out 0.1s; }
 
 .header-container {
   background: black url("../img/Logo.png") top no-repeat;
@@ -89,9 +89,9 @@ body {
     cursor: pointer; }
   .header-container nav {
     position: fixed;
-    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-transition: left 0.3s ease-in-out 0.1s;
+    -o-transition: left 0.3s ease-in-out 0.1s;
+    transition: left 0.3s ease-in-out 0.1s;
     top: 0;
     left: 0;
     width: 80%;
@@ -119,8 +119,9 @@ body {
 .login_button {
   position: absolute;
   top: 55px;
-  left: 5%;
-  width: 90%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
   background-color: #ce2520;
   border-radius: 1px;
   height: 40px;
@@ -269,7 +270,7 @@ body {
 
 .swiper-container {
   width: 100%;
-  height: 300px; }
+  height: auto; }
 
 .culture {
   background: #c0392b url("../img/BK-culture.jpg") no-repeat center center;
@@ -388,6 +389,9 @@ body {
     -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
+.art_fact {
+  display: none; }
+
 .gamification {
   background: url("../img/gamification.png") no-repeat center center;
   background-size: cover;
@@ -498,3 +502,48 @@ footer {
     font-weight: 100;
     font-style: italic;
     padding: 0 0 10px 0; }
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .main section:first-child {
+    float: right;
+    width: 35%;
+    margin: 130px 5% 0 0; }
+  .main section:nth-child(2) {
+    float: left;
+    width: 55%;
+    margin: 120px 0 20px 0; }
+    .main section:nth-child(2) h2 {
+      text-align: left; }
+    .main section:nth-child(2) p {
+      text-align: left; }
+  .culture {
+    overflow: hidden;
+    height: auto; }
+    .culture .cellule {
+      float: left;
+      width: 40%;
+      margin: 20px 5%; }
+      .culture .cellule:hover {
+        width: 40%; }
+  .alternative {
+    height: 400px; }
+    .alternative .art_fact {
+      display: block; }
+      .alternative .art_fact article {
+        background-color: white;
+        width: 200px;
+        height: 40px;
+        overflow: hidden; } }
+
+@media all and (min-width: 992px) {
+  .main section:first-child {
+    background-color: green; }
+  .culture {
+    overflow: hidden;
+    height: auto; }
+    .culture .cellule {
+      float: left;
+      width: 20%;
+      margin: 20px 2%; }
+      .culture .cellule:hover {
+        width: 20%; } }
